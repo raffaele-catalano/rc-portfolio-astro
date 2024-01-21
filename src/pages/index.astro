@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="RC Portfolio">
+	<main>
+		<h1>Hello There! I'm <span class="text-gradient">Raffaele</span>,<br><code>Junior Full Stack Web Developer</code></h1>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="/about"
+				title="About"
+				body="Read something about me"
+				link="https://picsum.photos/id/447/300/200"
+				fa='fa-solid fa-user-tie'
+			/>
+			<Card
+				href="/projects"
+				title="Projects"
+				body="Have a look to some of my projects"
+				link="https://picsum.photos/id/9/300/200"
+				fa='fa-solid fa-briefcase'
+			/>
+			<Card
+				href="/contacts"
+				title="Contacts"
+				body="Keep in touch!"
+				link="https://picsum.photos/id/611/300/200"
+				fa='fa-solid fa-address-card'
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	h1 {
+		text-align: center;
+		color: gold;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
